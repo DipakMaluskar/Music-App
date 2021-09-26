@@ -2,46 +2,50 @@ import { useState } from "react";
 import "./styles.css";
 
 const songsDB = {
-  pop: [
-    { music: "Breathless", singer: "Shankar Mahadevan", rating: "4.2/5" },
-    { music: "Tera Chehra", singer: "Adnan Sami", rating: "4/5" },
-    { music: "Sochta Hun Uska Dil", singer: "Babul Supriyo", rating: "4/5" },
-    { music: "Deewana Tera", singer: "Sonu Nigam", rating: "4/5" },
+  retro: [
     {
-      music: "Piya Re Piya Re",
-      singer: "Nusrat Fateh Ali Khan",
+      music: "Chura Liya Yaadon Ki Baaraat",
+      singer: "Suraj Jagan",
+      rating: "4/5"
+    },
+    { music: "Lag Ja Gale - Sanam", singer: "Sanam", rating: "4/5" },
+    { music: "Breathless", singer: "Shankar Mahadevan", rating: "4.2/5" },
+    { music: "Pal Pal Dil Ke Paas ", singer: "Mohammed Irfan", rating: "4/5" },
+    {
+      music: "Kya Yahi Pyar Hai ",
+      singer: "Meiyang Chang Shashaa Tirupati R. D. Burman",
       rating: "3.9/5"
     }
   ],
 
-  retro: [
-    { music: "Bachna Ae Hasinon", singer: "Kishore Kumar", rating: "4.6/5" },
-    { music: "O Mere Dil Ke Chain", singer: "Kishore Kumar", rating: "4.6/5" },
-    { music: "Likhe Jo Khat Tujhe", singer: "Mohammed Rafi", rating: "4.5/5" },
-    { music: "Chala Jata Hoon", singer: "Kishore Kumar", rating: "4.3/5" },
-    { music: "Ek Ajnabee Haseena Se", singer: "Kishore Kumar", rating: "4.3/5" }
+  indipop: [
+    { music: "ADR/ABR", singer: "EPR Iyer", rating: "4.6/5" },
+    { music: "Movez", singer: "Shez", rating: "4.6/5" },
+    { music: "Paristhiti", singer: "MC Heam", rating: "4.5/5" },
+    { music: "Shot Cypher", singer: "Yung Nos", rating: "4.3/5" },
+    { music: "Gangstar", singer: "King", rating: "4.3/5" }
   ],
 
-  classic: [
+  punjabi: [
     {
-      music: "Pyar Hua Iqrar Hua",
-      singer: "Manna Dey, Lata Mangeshkar",
+      music: "Mere Warga",
+      singer: "Kaka",
       rating: "4.6/5"
     },
     {
-      music: "Ajib Dastan Hai Yeh",
-      singer: "Lata Mangeshkar",
+      music: "Focus",
+      singer: "Sukh-E Musical Doctorz",
       rating: "4.5/5"
     },
     {
-      music: "Haal Kaisa Hai Janab Ka",
-      singer: "Asha Bhosle, Kishore Kumar",
+      music: "Bismillah",
+      singer: "Amrit Maan",
       rating: "4.5/5"
     },
-    { music: "Mera Joota Hai Japani", singer: "Mukesh", rating: "4.5/5" },
+    { music: "Nain Bengali", singer: "Guru Randhawa", rating: "4.5/5" },
     {
-      music: "Chhod Do Aanchal Zamana Kya Kahega",
-      singer: "Kishore Kumar, Asha Bhosle",
+      music: "Paagla",
+      singer: "Akhil",
       rating: "4.4/5"
     }
   ]
@@ -50,7 +54,7 @@ const songsDB = {
 var songsList = Object.keys(songsDB);
 
 export default function App() {
-  const [selectType, setSelectType] = useState("pop");
+  const [selectType, setSelectType] = useState("retro");
 
   function songTypeClickHnadler(songType) {
     setSelectType(songType);

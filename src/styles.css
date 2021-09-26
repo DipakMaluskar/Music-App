@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 :root {
-  --bg-color: #3ae3e9;
-  --btn-bg-color: #4ea1a1;
+  --bg-color: #e4907f;
+  --btn-bg-color: #eef0f5;
   --btn-bg-hover-color: #b2b9c2;
   --btn-hover-text-color: #5f6164;
 }
@@ -33,13 +33,12 @@ button {
   background-color: var(--btn-bg-color);
   padding: 0.6rem 1rem;
   margin: 1rem;
-  border-radius: 50%;
+  border-radius: 40%;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: var(--btn-bg-hover-color);
-  color: var(--btn-hover-text-color);
+  background-image: linear-gradient(to right, #e4907f 0%, #e4907f 100%);
 }
 
 li {
